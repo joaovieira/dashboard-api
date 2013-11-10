@@ -1,0 +1,7 @@
+== DASHBOARD API
+
+Simple Rails RESTful JSON API for serving the dashboard front-end application.
+
+For simplicity it was used rails-api.
+
+Using MongoDB with Mongoid ODM for Rails.
