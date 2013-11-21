@@ -1,6 +1,11 @@
 DashboardApi::Application.routes.draw do
   scope :api do
-    resources :widgets, except: [:new, :edit]
+    resources :widgets, except: [:new, :edit] do
+      resources :sites do
+        resources :inputs
+      end
+    end
+    resources :categories, except: [:new, :edit]
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

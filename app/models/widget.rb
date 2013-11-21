@@ -1,6 +1,10 @@
 class Widget
   include Mongoid::Document
-  embeds_many :inputs
   
-  field :type, type: String
+  field :name, type: String
+  field :title, type: String
+  field :description, type: String
+  
+  belongs_to :category
+  has_many :sites
 end
