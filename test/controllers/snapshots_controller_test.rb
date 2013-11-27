@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TaskTest < ActiveSupport::TestCase
+class SnapshotsControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end

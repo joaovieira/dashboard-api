@@ -8,6 +8,9 @@ gem 'rails-api'
 # database MongoDB
 gem "mongoid", github: "mongoid/mongoid"
 
+
+gem 'font-awesome-sass'
+
 # old asset pipeline
 #gem 'coffee-rails', '~> 4.0.1'
 #gem 'sass-rails', '~> 4.0.1'
