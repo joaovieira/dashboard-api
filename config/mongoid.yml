@@ -62,7 +62,7 @@ development:
 
     # Ensure all times are UTC in the app side. (default: false)
     # use_utc: false
-		
+
 <% if ENV['MONGOHQ_URL'] %>
   production:
     sessions:
