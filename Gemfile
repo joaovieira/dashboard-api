@@ -6,10 +6,8 @@ gem 'rails', '4.0.1'
 gem 'rails-api'
 
 # database MongoDB
-gem "mongoid", github: "mongoid/mongoid"
-
-
-gem 'font-awesome-sass'
+#gem "mongoid", github: "mongoid/mongoid"
+gem "mongoid", git: "https://github.com/mongoid/mongoid.git"
 
 # old asset pipeline
 #gem 'coffee-rails', '~> 4.0.1'
@@ -33,3 +31,7 @@ gem 'font-awesome-sass'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+group :production do
+  gem 'thin'
+end
