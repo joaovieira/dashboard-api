@@ -34,4 +34,5 @@ gem "mongoid", git: "https://github.com/mongoid/mongoid.git"
 
 group :production do
   gem 'thin'
+  gem 'rails_12factor'
 end
