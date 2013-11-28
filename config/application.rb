@@ -1,5 +1,9 @@
 require File.expand_path('../boot', __FILE__)
 
+# load app_config.yml  
+require 'yaml'  
+APP_CONFIG = YAML.load(File.read(File.expand_path('../app_config.yml', __FILE__)))
+
 # Pick the frameworks you want:
 # require "active_record/railtie"
 require "action_controller/railtie"
@@ -25,7 +29,7 @@ module DashboardApi
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 	
-	# Heroku requires this to be false
-	config.assets.initialize_on_precompile=false
+	  # Heroku requires this to be false
+	  config.assets.initialize_on_precompile=false
   end
 end

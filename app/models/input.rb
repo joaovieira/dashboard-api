@@ -5,6 +5,7 @@ class Input
   field :title, type: String
   field :description, type: String
   field :timestamp, type: String
+  field :occupation, type: Integer
   
   belongs_to :site
 end

@@ -60,7 +60,14 @@ widget1 = Widget.create({
   name: 'last-inputs',
   title: 'Last Inputs Widget',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas consectetur auctor. Suspendisse placerat tempus malesuada. Donec at convallis augue, at rutrum mauris. Sed a metus imperdiet, egestas orci ut, posuere est.',
-  sites: [site1, site2]
+  sites: [site1]
+})
+
+widget2 = Widget.create({
+  name: 'favorites',
+  title: 'Favorites',
+  description: 'Morbi bibendum condimentum libero nec fringilla. Nam posuere viverra urna, sit amet scelerisque dui molestie ac. Duis mi libero, mattis non tellus in, gravida scelerisque dolor. Phasellus aliquam turpis non sapien pretium varius.',
+  sites: []
 })
 
 
@@ -70,6 +77,12 @@ category1 = Category.create({
   widgets: [widget1]
 })
 
+category2 = Category.create({
+  name: 'general',
+  title: 'General',
+  widgets: [widget2]
+})
+
 
 inputs = Input.create([
     {
@@ -77,34 +90,39 @@ inputs = Input.create([
         feed_id: 1,
         title: 'OLT360',
         description: 'OLT SUL 3',
-        timestamp: '10:36'
+        timestamp: '10:36',
+        occupation: 0
     },
     {
         site: site1,
         feed_id: 2,
         title: 'EMILO X 16',
         description: 'EMILO XPTO 2130',
-        timestamp: '23:36'
+        timestamp: '23:36',
+        occupation: 20
     },
     {
         site: site1,
         feed_id: 3,
         title: 'OLT360',
         description: 'OLT SUL 2',
-        timestamp: '15:36'
+        timestamp: '15:36',
+        occupation: 39
     },
     {
         site: site1,
         feed_id: 4,
         title: 'BASTIDOR',
         description: 'SIS BAST OLTs',
-        timestamp: '15:36'
+        timestamp: '15:36',
+        occupation: 67
     },
     {
-        site: site2,
+        site: site1,
         feed_id: 5,
         title: 'EMILO S14',
         description: 'EMILO XPTO 1 TONY',
-        timestamp: '12:36'
+        timestamp: '12:36',
+        occupation: 82
     }
   ])
