@@ -30,8 +30,8 @@ DashboardApi::Application.configure do
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'example.com',
-    user_name:            'joaoguerravieira',
-    password:             APP_CONFIG['smtp_password'],
-    authentication:       'plain',
+    user_name:			  ENV["GMAIL_USERNAME"],
+	password: 			  ENV["GMAIL_PASSWORD"],
+	authentication:       'plain',
     enable_starttls_auto: true  }
 end
