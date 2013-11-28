@@ -25,7 +25,10 @@ module DashboardApi
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 	
-	  # Heroku requires this to be false
-	  config.assets.initialize_on_precompile=false
+	# Heroku requires this to be false
+	config.assets.initialize_on_precompile=false
+	
+	# Serve static assets from /public folder
+	config.serve_static_assets = true
   end
 end
