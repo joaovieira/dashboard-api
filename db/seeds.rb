@@ -52,7 +52,7 @@ site1 = Site.create({
 
 site2 = Site.create({
   title: 'Site 2',
-  url: 'http://www.yahoo.com'
+  url: '/api/widgets/links-occupation/sites/Site%202/inputs'
 })
 
 
@@ -70,11 +70,18 @@ widget2 = Widget.create({
   sites: []
 })
 
+widget3 = Widget.create({
+  name: 'links-occupation',
+  title: 'Links occupation',
+  description: 'Nam posuere viverra urna, sit amet scelerisque dui molestie ac. Phasellus aliquam turpis non sapien pretium varius. Donec at convallis augue, at rutrum mauris. Duis mi libero, mattis non tellus in, gravida scelerisque dolor.',
+  sites: [site2]
+})
+
 
 category1 = Category.create({
   name: 'network',
   title: 'Network',
-  widgets: [widget1]
+  widgets: [widget1, widget3]
 })
 
 category2 = Category.create({
@@ -124,5 +131,35 @@ inputs = Input.create([
         description: 'EMILO XPTO 1 TONY',
         timestamp: '12:36',
         occupation: 82
+    },
+    {
+        site: site2,
+        feed_id: 6,
+        title: 'Link 2',
+        occupation: 57
+    },
+    {
+        site: site2,
+        feed_id: 7,
+        title: 'Link 32',
+        occupation: 53
+    },
+    {
+        site: site2,
+        feed_id: 8,
+        title: 'Link 1',
+        occupation: 55
+    },
+    {
+        site: site2,
+        feed_id: 9,
+        title: 'Link 4',
+        occupation: 45
+    },
+    {
+        site: site2,
+        feed_id: 10,
+        title: 'Link 21',
+        occupation: 57
     }
   ])
