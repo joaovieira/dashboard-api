@@ -1,6 +1,6 @@
 class InputsController < ApplicationController
-  # GET /widgets
-  # GET /widgets.json
+  # GET /inputs
+  # GET /inputs.json
   def index
     @widget = Widget.where(name: params[:widget_id]).first
     @site = @widget.sites.where(title: params[:site_id]).first
