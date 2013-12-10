@@ -6,44 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-#
-# widgets = Widget.create([
-#  { 
-#    type: 'LastInputs',
-#    inputs: [
-#      {
-#        favorite: false,
-#        title: 'OLT360',
-#        description: 'OLT SUL 3',
-#        timestamp: '10:36'
-#      },
-#      {
-#        favorite: false,
-#        title: 'EMILO X 16',
-#        description: 'EMILO XPTO 2130',
-#        timestamp: '23:36'
-#      },
-#      {
-#        favorite: true,
-#        title: 'OLT360',
-#        description: 'OLT SUL 2',
-#        timestamp: '15:36'
-#      },
-#      {
-#        favorite: false,
-#        title: 'BASTIDOR',
-#        description: 'SIS BAST OLTs',
-#        timestamp: '15:36'
-#      },
-#      {
-#        favorite: false,
-#        title: 'EMILO S14',
-#        description: 'EMILO XPTO 1 TONY',
-#        timestamp: '12:36'
-#      }
-#    ]
-#  }
-#  ])
 
 site1 = Site.create({
   title: 'Site 1',
@@ -53,6 +15,11 @@ site1 = Site.create({
 site2 = Site.create({
   title: 'Site 2',
   url: '/api/widgets/links-occupation/sites/Site%202/inputs'
+})
+
+site4 = Site.create({
+  title: 'Site 4',
+  url: '/api/widgets/stats/sites/Site%204/inputs'
 })
 
 
@@ -77,6 +44,13 @@ widget3 = Widget.create({
   sites: [site2]
 })
 
+widget5 = Widget.create({
+  name: 'stats',
+  title: 'Statistics',
+  description: 'Fusce dapibus eleifend nunc vel tincidunt. Aliquam erat volutpat. Etiam sit amet euismod massa, et dapibus nisi. Curabitur in velit nec diam sagittis condimentum blandit quis est.',
+  sites: [site4]
+})
+
 
 category1 = Category.create({
   name: 'network',
@@ -88,6 +62,12 @@ category2 = Category.create({
   name: 'general',
   title: 'General',
   widgets: [widget2]
+})
+
+category3 = Category.create({
+  name: 'stats',
+  title: 'Statistics',
+  widgets: [widget5]
 })
 
 
@@ -161,5 +141,60 @@ inputs = Input.create([
         feed_id: 10,
         title: 'Link 21',
         occupation: 57
+    },
+    {
+        site: site4,
+        feed_id: 16,
+        title: 'Link A',
+        tuples: [
+          { key: 'label1', value: 'text1' },
+          { key: 'label2', value: 'text2' },
+          { key: 'label3', value: 'text3' },
+          { key: 'label4', value: 'text4' }
+        ] 
+    },
+    {
+        site: site4,
+        feed_id: 17,
+        title: 'Link B',
+        tuples: [
+          { key: 'label1', value: 'sample1' },
+          { key: 'label2', value: 'sample2' },
+          { key: 'label3', value: 'sample3' },
+          { key: 'label4', value: 'sample4' }
+        ] 
+    },
+    {
+        site: site4,
+        feed_id: 18,
+        title: 'Link Cd',
+        tuples: [
+          { key: 'label1', value: 'value1' },
+          { key: 'label2', value: 'value2' },
+          { key: 'label3', value: 'value3' },
+          { key: 'label4', value: 'value4' }
+        ] 
+    },
+    {
+        site: site4,
+        feed_id: 19,
+        title: 'Link D',
+        tuples: [
+          { key: 'label1', value: 'text1' },
+          { key: 'label2', value: 'text2' },
+          { key: 'label3', value: 'text3' },
+          { key: 'label4', value: 'text4' }
+        ] 
+    },
+    {
+        site: site4,
+        feed_id: 20,
+        title: 'Link Esx',
+        tuples: [
+          { key: 'label1', value: 'text1' },
+          { key: 'label2', value: 'text2' },
+          { key: 'label3', value: 'text3' },
+          { key: 'label4', value: 'text4' }
+        ] 
     }
   ])
