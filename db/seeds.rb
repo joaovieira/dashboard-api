@@ -55,6 +55,11 @@ site2 = Site.create({
   url: '/api/widgets/links-occupation/sites/Site%202/inputs'
 })
 
+site3 = Site.create({
+  title: 'Site 3',
+  url: '/api/widgets/low-priority/sites/Site%203/inputs'
+})
+
 
 widget1 = Widget.create({
   name: 'last-inputs',
@@ -77,6 +82,13 @@ widget3 = Widget.create({
   sites: [site2]
 })
 
+widget4 = Widget.create({
+  name: 'low-priority',
+  title: 'Low Priority',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas consectetur auctor. Suspendisse placerat tempus malesuada. Donec at convallis augue, at rutrum mauris. Sed a metus imperdiet, egestas orci ut, posuere est.',
+  sites: [site3]
+})
+
 
 category1 = Category.create({
   name: 'network',
@@ -88,6 +100,12 @@ category2 = Category.create({
   name: 'general',
   title: 'General',
   widgets: [widget2]
+})
+
+category3 = Category.create({
+  name: 'stats',
+  title: 'Statistics',
+  widgets: [widget4]
 })
 
 
@@ -161,5 +179,35 @@ inputs = Input.create([
         feed_id: 10,
         title: 'Link 21',
         occupation: 57
+    },
+    {
+        site: site3,
+        feed_id: 11,
+        description: 'Lost of signal',
+        timestamp: '11:30',
+    },
+    {
+        site: site3,
+        feed_id: 12,
+        description: 'Energy fail',
+        timestamp: '11:23',
+    },
+    {
+        site: site3,
+        feed_id: 13,
+        description: 'Open door',
+        timestamp: '11:16',
+    },
+    {
+        site: site3,
+        feed_id: 14,
+        description: 'Energy fail',
+        timestamp: '11:13',
+    },
+    {
+        site: site3,
+        feed_id: 15,
+        description: 'Lost of signal',
+        timestamp: '11:09',
     }
   ])
