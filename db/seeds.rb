@@ -6,44 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-#
-# widgets = Widget.create([
-#  { 
-#    type: 'LastInputs',
-#    inputs: [
-#      {
-#        favorite: false,
-#        title: 'OLT360',
-#        description: 'OLT SUL 3',
-#        timestamp: '10:36'
-#      },
-#      {
-#        favorite: false,
-#        title: 'EMILO X 16',
-#        description: 'EMILO XPTO 2130',
-#        timestamp: '23:36'
-#      },
-#      {
-#        favorite: true,
-#        title: 'OLT360',
-#        description: 'OLT SUL 2',
-#        timestamp: '15:36'
-#      },
-#      {
-#        favorite: false,
-#        title: 'BASTIDOR',
-#        description: 'SIS BAST OLTs',
-#        timestamp: '15:36'
-#      },
-#      {
-#        favorite: false,
-#        title: 'EMILO S14',
-#        description: 'EMILO XPTO 1 TONY',
-#        timestamp: '12:36'
-#      }
-#    ]
-#  }
-#  ])
 
 site1 = Site.create({
   title: 'Site 1',
@@ -58,6 +20,11 @@ site2 = Site.create({
 site3 = Site.create({
   title: 'Site 3',
   url: '/api/widgets/low-priority/sites/Site%203/inputs'
+})
+
+site4 = Site.create({
+  title: 'Site 4',
+  url: '/api/widgets/stats/sites/Site%204/inputs'
 })
 
 
@@ -89,6 +56,13 @@ widget4 = Widget.create({
   sites: [site3]
 })
 
+widget5 = Widget.create({
+  name: 'stats',
+  title: 'Statistics',
+  description: 'Fusce dapibus eleifend nunc vel tincidunt. Aliquam erat volutpat. Etiam sit amet euismod massa, et dapibus nisi. Curabitur in velit nec diam sagittis condimentum blandit quis est.',
+  sites: [site4]
+})
+
 
 category1 = Category.create({
   name: 'network',
@@ -105,7 +79,7 @@ category2 = Category.create({
 category3 = Category.create({
   name: 'stats',
   title: 'Statistics',
-  widgets: [widget4]
+  widgets: [widget4, widget5]
 })
 
 
@@ -208,6 +182,54 @@ inputs = Input.create([
         site: site3,
         feed_id: 15,
         description: 'Lost of signal',
-        timestamp: '11:09',
+        timestamp: '11:09'
+    },
+    {
+        site: site4,
+        feed_id: 16,
+        tuples: [
+          { key: 'Label 1', value: 'EMILO X 16' },
+          { key: 'Label 2', value: 'EMILO' },
+          { key: 'Label 3', value: '23:36' },
+          { key: 'Label 4', value: '23:36' },
+          { key: 'Label 5', value: '23:36' },
+          { key: 'Label 6', value: '23:36' }
+        ] 
+    },
+    {
+        site: site4,
+        feed_id: 17,
+        tuples: [
+          { key: 'Label 1', value: 'OLT360' },
+          { key: 'Label 2', value: 'OLT' },
+          { key: 'Label 3', value: '15:36' },
+          { key: 'Label 4', value: '15:36' },
+          { key: 'Label 5', value: '15:36' },
+          { key: 'Label 6', value: '15:36' }
+        ] 
+    },
+    {
+        site: site4,
+        feed_id: 18,
+        tuples: [
+          { key: 'Label 1', value: 'BASTIDOR' },
+          { key: 'Label 2', value: 'SIS' },
+          { key: 'Label 3', value: '15:36' },
+          { key: 'Label 4', value: '15:36' },
+          { key: 'Label 5', value: '15:36' },
+          { key: 'Label 6', value: '15:36' }
+        ] 
+    },
+    {
+        site: site4,
+        feed_id: 19,
+        tuples: [
+          { key: 'Label 1', value: 'BASTIDOR' },
+          { key: 'Label 2', value: 'SIS 2' },
+          { key: 'Label 3', value: '12:36' },
+          { key: 'Label 4', value: '12:36' },
+          { key: 'Label 5', value: '12:36' },
+          { key: 'Label 6', value: '12:36' }
+        ] 
     }
   ])

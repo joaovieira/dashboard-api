@@ -8,4 +8,5 @@ class Input
   field :occupation, type: Integer
   
   belongs_to :site
+  embeds_many :tuples, store_as: 'data'
 end
